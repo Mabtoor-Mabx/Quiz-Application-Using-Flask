@@ -79,8 +79,3 @@ app/
 * At the end of the quiz, the score is calculated by comparing user answers against correct options
 
 ---
-
-
----
-
-Let me know if you want me to include setup instructions, screenshots, deployment guide, or badges in your README as well! 😊
