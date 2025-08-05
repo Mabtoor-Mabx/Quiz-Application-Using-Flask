@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mx-auto" style="max-width: 600px;">
+    <div class="card-body">
+        <h4 class="card-title mb-4 text-center">{{ question.question_text }}</h4>
+
+        <form method="POST">
+            {{ form.hidden_tag() }}
+
+            <div class="list-group">
+                {% for value, label in form.choices.choices %}
+                    <label class="list-group-item d-flex align-items-center">
+                        <input
+                            type="radio"
+                            name="{{ form.choices.name }}"
+                            value="{{ value }}"
+                            id="choice_{{ value }}"
+                            class="form-check-input me-2"
+                            {% if form.choices.data == value %}checked{% endif %}
+                            required
+                        >
+                        {{ label }}
+                    </label>
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="btn btn-success w-100 mt-3">{{ form.submit.label }}</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

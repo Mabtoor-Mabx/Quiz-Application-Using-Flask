@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="text-center">
+    <h2 class="mb-4">
+        Your Score
+    </h2>
+    <h3>
+        {{score}} out of {{ total }}
+    </h3>
+    <a href="{{url_for('quiz.home')}}" class="btn btn-primary mt-4">Try Again</a>
+</div>
+    
+{% endblock  %}
